@@ -10,8 +10,8 @@
 
 * Only 705 bytes!
 
-### Limitations / TODO
+### Limitations
 
-* Not tested in any browser except Chrome (although it should work for all of them)
+* Not in IE (although it should work)
 
-* Can only select one element at a time
+* Can only select one element at a time (except in Firefox) - this is a limitation of current browsers
