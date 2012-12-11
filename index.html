@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery.selectText</title>
+	</head>
+	<body>
+		<h1>jQuery.selectText</h1>
+		<h2>Simple example with a link</h2>
+		<p>
+			<a href="#firstTextToSelect" class="selectText">Select the text below</a>			
+		</p>
+		<p id="firstTextToSelect">
+			Lorem Ipsum
+		</p>
+		<hr />
+		<h2>Simple example with a button</h2>
+		<button class="selectText" data-target-selector="#secondTextToSelect">Select the text below</button>			
+		<p id="secondTextToSelect">
+			Lorem Ipsum
+		</p>
+		<hr />
+		<h2>DIY examples</h2>
+		<button id="diyButton">Select the text below</button>			
+		<p id="thirdTextToSelect">
+			Lorem Ipsum
+		</p>
+		<!--<button id="selectAllH2Tags">Select all H2 tags</button>
+		<button id="selectAllParagraphs">Select all paragraphs</button>-->
+		<button id="selectAllText">Select all text</button>
+		<script src="jquery-1.8.1.js"></script>
+		<script src="jquery.selectText.min.js"></script>
+		<script>
+			$('#diyButton').on('click', function(event) {
+				event.preventDefault();
+				$('#thirdTextToSelect').selectText();
+			});
+			$('#selectAllH2Tags').on('click', function(event) {
+				event.preventDefault();
+				$('h2').selectText();
+			});
+			$('#selectAllParagraphs').on('click', function(event) {
+				event.preventDefault();
+				$('p').selectText();
+			});
+			$('#selectAllText').on('click', function(event) {
+				event.preventDefault();
+				$('body').selectText();
+			});
+		</script>
+	</body>
+</html>
